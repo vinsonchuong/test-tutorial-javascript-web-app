@@ -1,1 +1,3 @@
-alert('Loaded');
+import render from './hello';
+
+render();

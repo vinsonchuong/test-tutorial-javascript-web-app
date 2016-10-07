@@ -3,8 +3,11 @@ dist: trusty
 language: node_js
 node_js:
   - node
+before_deploy:
+  - webpack
 deploy:
   provider: surge
   domain: tutorial-javascript-web-app.surge.sh
+  skip_cleanup: true
 env:
   secure: m6w64hBiSZrRP3Me6OPdbQ79BqdM158jHXBRxz00LV9KXgWBJ492cXZYaCSz5dqUehlyvA9Qbp9fOKeIfIakTobXuyj/qwK8EfTHzG6sAMkboo2WJFm+TlyhZdwqbuHQD5SBL4/aZTFjH0+zvzK/ClG3lVrfNlnt4f7OA650BJ4ELHVKVri3oZgsFQ6ttTLVc7rOVHOzPz7+9tWVqG1bReaO/yVmDjwOnMO8Sa5nD+QHCW5Yv3aXgQ5enryrBfpQyd/SiMT//9h8qnTaLI5yMULlglWI8DBnv3x8NJvoNK/4Kf+Qn8BEZMNTKXkhmw9myMh170hPeTbvI6D+RWgAKnc4FLdOSLzOigziainIyAWLGgN+aO8E8yqj+l/yFKZe/I7xM7JZw0SqflOIJcJElAuxVQbA+tss4mOlB8YdAHrU3W6IzgirWavIi/OVrSC+Rr/SuT2i6BjPM35My0GRpN57spVRpVBAGbddVhPZ5R1r3nPTSTpRQw8enQ/+NoYZu2PRT4GJ5CePdF1PBCyPRcZJlwsfHIs+vYUYm+E8qA30Pftizt+/STjQQROLsxjGuqcJ1/4vfbxf/M/lTmIQHi/rPRi0F8At+eLx9/gl2pb1WwpCp7ZdEpJbGh8Xeot40CqDs/JTlUp3it9+K0Pj/jAGhQwDhuyWhWnMhJffyCc=

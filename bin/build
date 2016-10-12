@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+set -o errexit
+set -o nounset
+set -o pipefail
+
+rm -rf dist
+mkdir dist
+
+html-minifier -c html-minifier.json index.html -o dist/index.html
